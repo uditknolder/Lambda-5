@@ -10,11 +10,10 @@ import java.util.stream.Collectors;
 public class DistinctStringApplicationClass {
     public static List<String> getDistinctStrings(List<String> stringList){
 
-        // Here  lambda expression to implementing required tasks.
         Function<List<String>, List<String>> distinctStrings = string -> string.stream()
-                .distinct()     // It's used to getting distinct elements
-                .sorted()       // It's used for sorting the list
-                .collect(Collectors.toList()); // collecting as a list
+                .distinct()    
+                .sorted()      
+                .collect(Collectors.toList()); 
         return distinctStrings.apply(stringList);
     }
     public static void main(String[] arguments) {
